@@ -1,0 +1,285 @@
+/* .table-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    }
+    
+    table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    }
+    
+    th, td {
+    padding: 8px;
+    text-align: left;
+    vertical-align: top;
+    }
+    
+    th {
+    background-color: #f2f2f2;
+    }
+    
+    .name {
+    width: 25%;
+    }
+    
+    .description {
+    width: 40%;
+    }
+    
+    .image {
+    width: 20%;
+    text-align: center;
+    }
+    
+    .image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    }
+    
+    .price {
+    width: 10%;
+    }
+    
+    .link {
+    width: 5%;
+    text-align: center;
+    }
+    
+    @media only screen and (max-width: 768px) {
+    .name, .description, .image, .price, .link {
+    display: block;
+    width: 100%;
+    }
+    .image {
+    text-align: left;
+    }
+    .image img {
+    margin: 0;
+    }
+    } */
+
+
+    /* Image to the right of name and price */
+.table-wrapper table tbody tr td {
+    vertical-align: top;
+  }
+  
+  .table-wrapper table tbody tr td.image-wrapper {
+    padding-right: 10px;
+  }
+  
+  /* View product link below name */
+  .table-wrapper table tbody tr td.link {
+    padding-top: 10px;
+  }
+  
+  /* Centered table headers */
+  .table-wrapper table thead th {
+    text-align: center;
+  }
+  
+  /* Styling for table headers and cell text */
+  .table-wrapper table th, .table-wrapper table td {
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  /* Remove cell borders except for top */
+  .table-wrapper table td {
+    border: none;
+    border-top: 1px solid black;
+  }
+  
+  /* Bold header row */
+  .table-wrapper table thead tr th {
+    font-weight: bold;
+  }
+  
+  /* Styling for search form */
+  form {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #3e8e41;
+  }
+  
+  /* Overall wrapper styling */
+  .table-wrapper {
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  /* CSS for Amazon results */
+.amazon-table-wrapper {
+    margin-top: 50px;
+  }
+  
+  .amazon-table-wrapper h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .amazon-table-wrapper table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  .amazon-table-wrapper td {
+    padding: 10px;
+    vertical-align: middle;
+  }
+  
+  .amazon-table-wrapper th {
+    padding: 10px;
+    text-align: left;
+    font-weight: normal;
+  }
+  
+  .amazon-table-wrapper .image-wrapper {
+    width: 150px;
+  }
+  
+  .amazon-table-wrapper .image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .amazon-table-wrapper .product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .amazon-table-wrapper .product-info .name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .amazon-table-wrapper .product-info .price {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .amazon-table-wrapper .product-info .link {
+    font-size: 14px;
+  }
+  
+
+  .table-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .amazon-table {
+    float: left;
+    width: 50%;
+    padding-right: 10px;
+    box-sizing: border-box;
+  }
+  
+  .flipkart-table {
+    float: right;
+    width: 50%;
+    padding-left: 10px;
+    box-sizing: border-box;
+  }
+  
+  .amazon-table table,
+  .flipkart-table table {
+    width: 100%;
+  }
+  
+  .amazon-table h1,
+  .flipkart-table h1 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .amazon-table td,
+  .flipkart-table td {
+    padding: 10px;
+    vertical-align: top;
+  }
+  
+  .amazon-table .image-wrapper,
+  .flipkart-table .image-wrapper {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+  }
+  
+  .amazon-table .image-wrapper img,
+  .flipkart-table .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .amazon-table .link,
+  .flipkart-table .link {
+    text-align: center;
+  }
+  
+  /* Amazon Results */
+.table-wrapper:nth-of-type(1) {
+    width: 50%;
+    float: left;
+  }
+  
+  /* Flipkart Results */
+  .table-wrapper:nth-of-type(2) {
+    width: 50%;
+    float: right;
+  }
+
+  /* Amazon Results
+.table-wrapper:nth-of-type(3) {
+    width: 50%;
+    float: ;
+  }
+  
+  /* Flipkart Results 
+  .table-wrapper:nth-of-type(4) {
+    width: 50%;
+    float: right;
+  } */
+  
+  .table-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  th,
+  td {
+    text-align: left;
+    padding: 8
+  }  

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Amazon Product Search</title>
+</head>
+<body>
+    <form action="{% url 'home' %}" method="GET">
+        <input type="text" name="search" placeholder="Search for a product...">
+        <input type="submit" value="Search">
+    </form>
+    {% if amazon_results %}
+        {% for result in amazon_results %}
+            <div>
+                <h2>{{ result.name }}</h2>
+                <p>{{ result.price }}</p>
+                <img src="{{ result.image_url }}" alt="Product image">
+                <a href="{{ result.product_url }}">View on Amazon</a>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No results found.</p>
+    {% endif %}
+</body>
+</html>
