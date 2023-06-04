@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Product Search Results</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="static/style1.css">
+  </head>
+  <body>
+
+    <form action="{% url 'home' %}" method="get">
+      <input type="text" name="search" placeholder="Search products...">
+      <button type="submit">Search</button>
+    </form>
+    
+    <div class="table-wrapper">
+      <h1>Amazon Results</h1>
+      <table>
+        <thead>
+          <tr>
+            <th class="name">Name</th>
+            <th class="description">Description</th>
+            <th class="image">Image</th>
+            <th class="price">Price</th>
+            <th class="link">Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for result in amazon_results %}
+          <tr>
+            <td>{{ result.name }}</td>
+            <td>{{ result.description }}</td>
+            <td class="image-wrapper"><img src="{{ result.image_url }}" alt="{{ result.name }} image"></td>
+            <td class="price">{{ result.price }}</td>
+            <td class="link"><a href="{{ result.product_url }}">View Product</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-wrapper">
+      <h1>Flipkart Results</h1>
+      <table>
+        <thead>
+          <tr>
+            <th class="name">Name</th>
+            <th class="description">Description</th>
+            <th class="image">Image</th>
+            <th class="price">Price</th>
+            <th class="link">Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for result in flipkart_results %}
+          <tr>
+            <td>{{ result.name }}</td>
+            <td>{{ result.description }}</td>
+            <td class="image-wrapper"><img src="{{ result.image_url }}" alt="{{ result.name }} image"></td>
+            <td class="price">{{ result.price }}</td>
+            <td class="link"><a href="{{ result.product_url }}">View Product</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- <div class="table-wrapper">
+      <h1>Jiomart Results</h1>
+      <table>
+        <thead>
+          <tr>
+            <th class="name">Name</th>
+            <th class="description">Description</th>
+            <th class="image">Image</th>
+            <th class="price">Price</th>
+            <th class="link">Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for result in jiomart_results %}
+          <tr>
+            <td>{{ result.name }}</td>
+            <td>{{ result.description }}</td>
+            <td class="image-wrapper"><img src="{{ result.image_url }}" alt="{{ result.name }} image"></td>
+            <td class="price">{{result.price }}</td>
+            <td class="link"><a href="{{ result.product_url }}">View Product</a></td>
+            </tr>
+            {% endfor %}
+            </tbody>
+            </table>
+            </div> -->
