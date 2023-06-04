@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  table {
+    border-collapse: collapse;
+    margin: 20px 0;
+    width: 100%;
+  }
+  
+  th {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  td {
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  .amazon-table, .flipkart-table {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .amazon-table td, .flipkart-table td {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+  }
+  
+  .jiomart-table, .snapdeal-table {
+    margin-top: 20px;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .amazon-table td, .flipkart-table td {
+      width: 100%;
+    }
+  }
+
+  /* Reduce the font size and padding of table cells */
+table {
+  font-size: 14px;
+  padding: 4px;
+}
+
+/* Set a fixed width for the table */
+table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+/* Reduce the width of table columns */
+table td, table th {
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+  
