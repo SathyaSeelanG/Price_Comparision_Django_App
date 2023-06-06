@@ -3,8 +3,268 @@
   <head>
     <meta charset="utf-8">
     <title>Product Search Results</title>
-    {% load static %}
-    <link rel="stylesheet" type="text/css" href="static/style2.css">
+<!--     {% load static %}
+    <link rel="stylesheet" type="text/css" href="static/style2.css"> -->
+    
+    <style>  
+      
+      /* Product list wrapper */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+  }
+  
+  /* Product section wrapper */
+  .product-section {
+    width: 30%;
+    margin-bottom: 20px;
+  }
+  
+  /* Product item wrapper */
+  .product-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  /* Product image */
+  .product-image img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  /* Product info */
+  .product-info h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .product-info p {
+    margin-bottom: 10px;
+  }  
+
+
+  
+  /* Image inside logo */
+  /* .product-logo img {
+    width: 10px;
+    height: 40px;
+  } */ 
+
+  .product {
+    width: 600px;
+    border: 3px solid #9d2020;
+    padding: 10px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    background-color: #f0eeee;
+  }
+
+
+  /* header */
+
+
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }
+  
+  header form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  header input[type="text"] {
+    width: 300px;
+    height: 30px;
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  header button[type="submit"] {
+    height: 40px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+
+  header {
+    width: 100%;
+    height: 40px;
+    background-color: #b2dc0b;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    margin-bottom: 50px; /* add some space below header */
+  }
+  
+  .header-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .logo a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  form {
+    display: flex;
+    align-items: center;
+  }
+  
+  input[type="text"] {
+    width: 300px;
+    height: 40px;
+    border: none;
+    background-color: #eee;
+    padding: 0 10px;
+    font-size: 16px;
+    border-radius: 20px;
+    outline: none;
+  }
+  
+  button[type="submit"] {
+    height: 40px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    padding: 0 20px;
+    font-size: 16px;
+    border-radius: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .header-wrapper {
+      flex-direction: column;
+      justify-content: center;
+      height: auto;
+      padding: 10px 20px;
+    }
+  
+    .logo {
+      margin-bottom: 10px;
+      text-align: center;
+    }
+  
+    form {
+      margin-top: 10px;
+    }
+  
+    input[type="text"] {
+      width: 100%;
+    }
+  }
+
+
+  /* header { 
+    margin-bottom: 200px; 
+  } */
+  
+  main {
+    margin-top: 60px; /* add some space above body content */
+    margin-bottom: 100px;
+  }
+ /* top table  */
+
+
+  .topprize {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid rgb(248, 149, 149);
+  }
+  
+  .topprize h1 {
+    margin: 10px 0;
+    font-size: 24px;
+    margin: 0;
+    padding: 10px;
+  }
+  
+  .topprize p.price {
+    margin: 0;
+    padding: 10px;
+    font-size: 1.5rem; 
+    font-size: 18px;
+  }
+
+
+  body {
+    min-height: 100vh;
+    position: relative;
+  }
+
+  /* footer */
+
+
+ 
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #000000;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  
+  .social-links a {
+    color: #666;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+  
+  .social-links a:hover {
+    color: #9d2020;
+  }
+  
+  .back-to-top a {
+    color: #50ad0e;
+    text-decoration: none;
+    align-items: center;
+  }
+  
+  .back-to-top a:hover {
+    color: #9d2020;
+  }
+
+ </style>
+
   </head>
   <body>
 <header>
