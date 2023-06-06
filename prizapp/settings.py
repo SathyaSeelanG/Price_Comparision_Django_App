@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-x8%vdn3xi=m^5p5vtyn#06w1j)2lk5#3&8+tv1ez*-#o1=@f#@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['price-comparision-django-keim.onrender.com']
+
 
 
 # Application definition
